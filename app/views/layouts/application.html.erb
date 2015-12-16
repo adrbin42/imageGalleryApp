@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<header>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Glory House Events", root_path %></li>
+            <% @categoryNav.each do |category| %>
+              <li><%= link_to category.name, category_path(category.id) %></li>
+            <% end %>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+             <li><%= link_to "Upload Photo", upload_path %></li>
+             <li><%= link_to "Add Category", new_category_path %></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+    
+    <section>
+            <div class="container">
+              <!-- Alerts & Messages -->
+              <% if flash[:notice] %>
+                <div class="alert alert-success"><%= flash[:notice] %></div>
+              <% end %>
+              
+              <% if flash[:alert] %>
+                <div class="alert alert-danger"><%= flash[:alert] %></div>
+              <% end %>
+              <%= yield %>
+            </div>
+    </section>
+  <footer>
+    <p>Copyright @copy; 2015 Glory House World Church</p>
+  </footer>
+</body>
+</html>
