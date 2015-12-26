@@ -13,7 +13,10 @@
 
  *= require_self
  */
- 
+ @import "main";
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import "main";
+ @import "lightbox";
+
+ 
+

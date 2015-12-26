@@ -1,224 +1,32 @@
 
-        <div id="gallery">
-            <h2> All Images</h2>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/GTG2015/IMG_0445.JPG" class="photo-hover" data-lightbox="my-images" data-title="Glory To Glory 2015">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/GTG2015/IMG_0445.JPG"></img></div>
-                </div>
+<div id="gallery">
+    <h2> All Images</h2>
+    <% if @images.exists? %>
+      <% @images.each_slice(4) do |image| %>
+        <div class="row">
+          <% image.each do |image| %>
+            <div class="col-md-3">
+              <div class="photo photo-type-line">
+                <a href="<%= image.image_url() %>" rel="lightbox" class="photo-hover" reldata-lightbox="my-images" data-title="<%= image.image_title %>">
+                  <div class="photo-info">
+                    <div class="headline"><%= image.image_title %></div>
+                    <div class="line"></div>
+                    <div class="desc"><%= image.image_description %></div>
+                  </div>
+                  <div class="mask"></div>
+                </a>
+                <div class="photo-img"><img src="<%= image.image_url(:thumb) %>"></div>
               </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/GTG2015/IMG_0461.JPG" class="photo-hover" data-lightbox="my-images" data-title="Glory To Glory 2015">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/GTG2015/IMG_0461.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/GTG2015/IMG_0464.JPG" class="photo-hover" data-lightbox="my-images" data-title="Glory To Glory 2015">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/GTG2015/IMG_0464.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/GTG2015/IMG_0467.JPG" class="photo-hover" data-lightbox="my-images" data-title="Glory To Glory 2015">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/GTG2015/IMG_0467.JPG"></div>
-                </div>
-              </div>
-            </div><!-- end row for GTG 2015 -->
-            
-            <div class="row">
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/FireConference/_MG_4691.JPG" class="photo-hover" data-lightbox="my-images" data-title="Fire Conference 2015">
-                    <div class="photo-info">
-                      <div class="headline">Fire Conferenc 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/FireConference/_MG_4691.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/FireConference/_MG_4692.JPG" class="photo-hover" data-lightbox="my-images" data-title="Fire Conference 2015" >
-                    <div class="photo-info">
-                      <div class="headline">Fire Conferenc 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/FireConference/_MG_4692.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/FireConference/_MG_4759.JPG" class="photo-hover" data-lightbox="my-images" data-title="Fire Conference 2015">
-                    <div class="photo-info">
-                      <div class="headline">Fire Conferenc 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/FireConference/_MG_4759.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/FireConference/_MG_4760.JPG" class="photo-hover" data-lightbox="my-images" data-title="Fire Conference 2015">
-                    <div class="photo-info">
-                      <div class="headline">Fire Conferenc 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/FireConference/_MG_4760.JPG"></div>
-                </div>
-              </div>
-            </div><!-- end row for Fire Conference -->
-            
-            <div class="row">
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/JamaicaMissionsTrip/DSC_0057.JPG" class="photo-hover" data-lightbox="my-images" data-title="Jamaica Missions Trip">
-                    <div class="photo-info">
-                      <div class="headline">Jamaica Missions Trip</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this missions trip.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/JamaicaMissionsTrip/DSC_0057.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/JamaicaMissionsTrip/DSC_0064.JPG" class="photo-hover" data-lightbox="my-images" data-title="Jamaica Missions Trip">
-                    <div class="photo-info">
-                      <div class="headline">Jamaica Missions Trip</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this missions trip.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/JamaicaMissionsTrip/DSC_0064.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/JamaicaMissionsTrip/DSC_0120.JPG" class="photo-hover" data-lightbox="my-images" data-title="Jamaica Missions Trip">
-                    <div class="photo-info">
-                      <div class="headline">Jamaica Missions Trip</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this missions trip.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/JamaicaMissionsTrip/DSC_0120.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/JamaicaMissionsTrip/DSC_0123.JPG" class="photo-hover" data-lightbox="my-images" data-title="Jamaica Missions Trip">
-                    <div class="photo-info">
-                      <div class="headline">Jamaica Missions Trip</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this missions trip.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/JamaicaMissionsTrip/DSC_0123.JPG"></div>
-                </div>
-              </div>
-            </div><!-- end row Jamaica Missions Trip -->
-            
-            <div class="row">
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/Other/IMG_1306.JPG" class="photo-hover" data-lightbox="my-images" data-title="Pastor Chuzzy Ministering">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/Other/IMG_1306.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/Other/IMG_1309.JPG" class="photo-hover" data-lightbox="my-images" data-title="Pastor Chuzzy Ministering">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div>
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/Other/IMG_1309.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/Other/IMG_1310.JPG" class="photo-hover" data-lightbox="my-images" data-title="Pastor Chuzzy Ministering">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div><!--end Glory to Glory 2015 -->
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/Other/IMG_1310.JPG"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="photo photo-type-line">
-                  <a href="img/Other/IMG_1310.JPG" class="photo-hover" data-lightbox="my-images" data-title="Pastor Chuzzy Ministering">
-                    <div class="photo-info">
-                      <div class="headline">Glory To Glory 2015</div>
-                      <div class="line"></div>
-                      <div class="desc">See how God moved in power during this conference.</div>
-                    </div><!--end Glory to Glory 2015 -->
-                    <div class="mask"></div>
-                  </a>
-                  <div class="photo-img"><img src="img/Other/IMG_1310.JPG"></div>
-                </div>
-              </div>
-            </div><!-- end row for Other pictures-->
-          </div><!-- end gallery -->
+            </div>
+          <% end %>
+      </div>
+    <% end %>
+    <% else %><p>There are no images.</p>
+  <% end %>
+</div>
+    
+    
+    
+    
+ 
 
