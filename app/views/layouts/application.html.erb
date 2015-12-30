@@ -3,9 +3,6 @@
 <head>
   <title>GH Photo Galleries</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'lightbox', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -26,7 +23,7 @@
           <div class="dropdown">
             <button class="btn btn-default dropdown" type="button" id="dropdownMenu1"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              <%= link_to "Glory House Picture Galleries", root_path %>
+              <a href='<%= link_to "Glory House Picture Galleries", root_path %>'>Glory House Picture Galleries</a>
               <span class="caret"></span>  
             </button>
           <ul class="nav navbar-nav dropdown-menu" aria-labelledby="dropdownMenu1">
