@@ -12,11 +12,9 @@
  *
 
  *= require_self
+ *= require_tree .
  */
- @import "main";
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "lightbox";
+
 
  
 
